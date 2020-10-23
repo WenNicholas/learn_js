@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        a {
+            text-decoration: none;
+            margin: 0px 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="" style="cursor: pointer">
+        <img id="imgId" style="visibility:visible " src="green.jpg">
+    </a>
+
+    <a href="" style="cursor: pointer">
+        <img id="imgId1" style="visibility:visible " src="yellow.jpg">
+    </a>
+
+    <a href="" style="cursor: pointer">
+        <img id="imgId2" style="visibility:visible " src="red.jpg">
+    </a>
+
+    <script>
+
+
+
+        function $(id) {
+            return typeof id==='string'?document.getElementById(id):null;
+        }
+
+        function swImg(id,second){
+            //如果可见，则隐藏
+            if($(id).style.visibility == "visible"){
+                $(id).style.visibility = "hidden";
+            }
+            //设置图像可见
+            else{
+                $(id).style.visibility = "visible";
+            }
+            //间隔的毫秒
+            setTimeout("swImg('"+id+"')",second);
+        }
+        swImg("imgId",600);
+        swImg("imgId1",700);
+        swImg("imgId2",800);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+一.定时器的创建
+
+    //第一种
+    setInterval(function () {
+        // console.log('哈哈哈哈');
+    },1000);
+
+    //第二种:调用函数
+    function test(){
+        // console.log('呵呵呵');
+    }
+    setInterval(test,1000);
+
+
+
+二.定时器的开启和关闭
+
+
+<button id="but1">定时器开启</button>
+<button id="but2">定时器结束</button>
+
+
+var height=150;
+    //定时器开启
+    $("but1").onclick=function () {
+        timer=setInterval(function(){
+            height+=1;
+            console.log("身高:"+height);
+        },1000);
+
+    };
+    //定时器关闭
+    $("but2").onclick=function () {
+        clearInterval(timer);
+    }
+    
+    function $(id) {
+        return typeof id==='string'?document.getElementById(id):null;
+    }

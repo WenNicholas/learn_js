@@ -1,0 +1,23 @@
+<div id="box" style="background-color: blue;width: 100px;height: 50px"></div>
+
+<script>
+    //防止定时器的相互干扰，形成累加的结果
+
+
+    //先清除定时器，再开启定时器
+    var height=0;
+    var timer=null;
+    var box=document.getElementById("box");
+
+    box.onmouseover=function () {
+        //清除定时器
+        clearInterval(timer);
+
+        //再开启定时器
+        timer=setInterval(function () {
+            height+=1;
+            console.log(height);
+        },1000);
+
+    }
+</script>

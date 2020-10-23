@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        <!--定位-->
+    </style>
+</head>
+<body>
+
+<div id="nav">
+    <spna id="t_mall"></spna>   <!--移动的元素-->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+</div>
+
+<script>
+    function $(id) {
+        return typeof id==='string'?document.getElementById(id):null;
+    }
+
+
+    window.onload=function () {
+        var nav=$("nav");
+        var t_mall=nav.childNodes[0];//t_mall的角标是从0开始的
+        var ul=nav.childNodes[1];   //ul的角标是从1开始的
+        console.log(ul);
+        var allLis=ul.childNodes;
+        //记录鼠标点击的位置
+        var beginX=0;
+        //遍历li标签
+        for (var i=0;i<allLis.length;i++) {
+            var li=allLis[i];
+
+            //监听鼠标进入
+            li.onmouseover=function () {
+                var offsetLeft=this.offset;
+                end=offsetLeft;
+            };
+            //监听那个鼠标离开
+            li.onmouseout=function () {
+                end=beginX;//回到点击前的li
+            };
+            //监听鼠标点击
+            li.onmousedown=function () {
+                beginX=this.offsetLeft;
+            }
+        }
+
+        //缓动动画
+        var begin=0,end=0;
+        setInterval(function () {
+            begin=begin-(end-begin)*0.1;     //0.1是缓动系数
+            t_mall.style.left=begin+"px";        //t_mall是移动的元素
+        },10);
+    }
+
+</script>
+</body>
+</html>

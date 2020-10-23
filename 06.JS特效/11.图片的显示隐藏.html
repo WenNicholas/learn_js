@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<button id="btn">隐藏</button>
+		<li><img src="1.jpg" alt=""></li>
+	</div>
+
+
+<script>
+	
+	var btn=document.getElementById("btn");
+	var img=document.getElementsByTagName("img")[0];
+
+	//btn.innerHTML和btn.innerText都可以获取标签的内容
+	
+	btn.onclick=function(){
+		if (btn.innerHTML==="隐藏") {
+				img.style.display="none";
+				btn.innerHTML="显示";
+				console.log(btn.innerHTML);
+		}else{
+			img.style.display="block";
+			btn.innerHTML="隐藏";
+		}
+						
+	}
+</script>
+</body>
+</html>

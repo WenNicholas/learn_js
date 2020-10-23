@@ -1,0 +1,7 @@
+返回当前对象的父级(带有定位)盒子，可能是父亲，也可能是爷爷
+
+如果当前元素的父级没有进行css定位(position：absolute或relative)，则其offsetParent为body，否则为最近的那个父级元素
+
+
+注意和parentNode的区别：
+parentNode无论有无定位，都能找到父级元素，但不能获取爷爷级元素

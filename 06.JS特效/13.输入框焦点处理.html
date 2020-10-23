@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<input id="name" type="text" placeholder="请输入用户名">
+
+
+	<script>
+		
+		window.onload=function(){
+
+			var name=document.getElementById("name");
+
+			//获得焦点
+			name.onfocus=function(){
+				this.style.width='600px';
+				this.style.height='200px';
+			}
+
+			//失去焦点
+			name.onblur=function(){
+				this.style.width='173px';
+				this.style.height='21px';
+			}
+		}
+	</script>
+</body>
+</html>

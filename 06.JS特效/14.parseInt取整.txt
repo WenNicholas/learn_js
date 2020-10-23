@@ -1,0 +1,9 @@
+var num=10.999;
+
+Math.ceil(num);	向上取整
+Math.floor(num);	向下取整
+Math.round(num);	四舍五入
+
+parseInt(num)	提取整数，不只对数值有效，对以数值开头的字符串也有效
+
+parseFloat(num)	提取小数，不只对数值有效，对以数值开头的字符串也有效

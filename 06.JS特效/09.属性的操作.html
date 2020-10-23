@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="divTag">
+		
+		<button id="btn">按钮</button>
+		<br>
+		<br>
+		<br>
+		<span id="span1">
+			第一个span标签
+		</span>
+		<span id="span2">
+			第二个span标签
+		</span>
+		<span id="span3">
+			第三个span标签
+		</span>
+		<img id="imgTag">
+	</div>
+
+
+	<script>
+	//获取属性
+	var span1=document.getElementById("span1");
+	var attrSpan1=span1.getAttribute("id");
+	console.log(attrSpan1);
+
+
+	//设置属性
+	var imgTag=document.getElementById("imgTag");
+	imgTag.setAttribute("src","1.png");
+	imgTag.setAttribute("aaa","aaaaaa");
+
+	//删除节点的属性
+	imgTag.removeAttribute("aaa");
+
+</script>
+</body>
+</html>

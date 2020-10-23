@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<button id="begin">开始点名</button>
+<button id="end">结束点名</button>
+
+<div id="name" style="margin-top: 20px;"></div>
+
+
+<script>
+
+    function $(id) {
+        return typeof id==='string'?document.getElementById(id):null;
+    }
+
+    //用数组代替数据库姓名数据
+    var nameArr=['张三','李四','王五','宋江','李逵','扈三娘','甄子丹','谢霆锋','范冰冰'];
+
+    //定义定时器
+    var timer=null;
+    //监听点击
+    $("begin").onclick=function () {
+        //清除定时器
+        clearInterval(timer);
+        //开启定时器
+        timer=setInterval(function () {
+            //随机数
+            var num=parseInt(Math.random()* nameArr.length);
+            // console.log(num);
+            var s_name=nameArr[num];
+            // console.log(s_name);
+            $("name").innerText=s_name;
+        },80);
+    }
+    
+    $("end").onclick=function () {
+        clearInterval(timer);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+//获取将来某个时间
+var futureDate=new Date("2018/10/01 12:00:00");
+
+var futureTime=futureDate.getTime();
+
+//获取当前时间
+var currentDate=new Date();
+
+var currentTime=currentDate.getTime();
+
+setIn

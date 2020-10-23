@@ -1,0 +1,5 @@
+var begin=0,end=0;
+setInterval(function(){
+     begin=begin-(end-begin)*0.1;	//0.1是缓动系数
+     t_mall.style.left=begin+"px";	//t_mall是要缓动的元素
+},10);

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<script type="text/html">
+		//shift
+
+		//shift()删除数组的第一个元素，并将结果返回
+		var arr=['张三','李四','王五'];
+		console.log(arr.shift());//张三
+		console.log(arr)//["李四", "王五"];
+	</script>
+
+	<script type="text/html">
+		
+		//unshift
+
+		var arr=['张三','李四','王五'];
+		console.log(arr.unshift('小沈阳','王麻子'));//5
+		console.log(arr);// ["小沈阳", "王麻子", "张三", "李四", "王五"]
+	</script>
+
+	<script type="text/html">
+		//reverse()改变原数组
+		var arr=['张三','李四','王五'];
+		console.log(arr.reverse());["王五", "李四", "张三"]
+		console.log(arr)
+	</script>
+
+	<script type="text/html">
+		//concat() 不改变原数组
+		var arr=['张三','李四','王五'];
+		console.log(arr.concat('yhl'));//["张三", "李四", "王五", "yhl"]
+		console.log(arr);//["张三", "李四", "王五"]
+
+	</script>
+
+	<script>
+		//indexOf(查找的元素,起始的角标),从后往前查找，
+		var arr=[2,4,6,8,8,10,12,2,4,6];
+
+		console.log(arr.indexOf(2,2));//返回的是角标7，而不是元素
+
+		console.log(arr[arr.indexOf(2,2)]);//角标对应的元素
+
+
+		//lastIndexOf(查找的元素,起始的角标),从前往后查找，
+		console.log(arr.lastIndexOf(4,2));//返回的是角标1
+	</script>
+</body>
+</html>

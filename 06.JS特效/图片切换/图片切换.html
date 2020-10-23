@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		ul li img {
+			width: 80px;
+			height: 60px;
+			float: left;
+
+			padding-left: 20px;
+		}
+
+		ul{
+			width: 
+		}
+
+		li {
+			list-style: none;
+			margin-left:-60px;
+			/*overflow: hidden;*/
+		}
+	</style>
+
+	<script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	
+	<p id="desc">第一张</p>
+	<img src="1.jpg" alt="" style="width: 480px;height: 300px;" id="preview">
+
+	<ul>
+		<li><a href="1.jpg" class="aa" title="第一张"><img src="1.jpg" alt="第一张"></a></li>
+		<li><a href="2.jpg" class="aa" title="第二张"><img src="2.jpg" alt="第二张"></a></li>
+		<li><a href="3.jpg" class="aa" title="第三张"><img src="3.jpg" alt="第三张"></a></li>
+		<li><a href="4.jpg" class="aa" title="第四张"><img src="4.jpg" alt="第四张"></a></li>
+		<li><a href="5.jpg" class="aa" title="第五张"><img src="5.jpg" alt="第五章"></a></li>
+	</ul>
+</body>
+</html>
+<script type="text/javascript">
+	
+	// $('.aa').click(function(){
+
+	// 	var pre_url = $('#preview').attr('src');
+
+	// 	var url = $(this).children().attr('src');
+
+	// 	$('#preview').attr('src',url);
+
+	// 	$(this).children().attr('src',pre_url);
+	// })
+	var desc=document.getElementById("desc");
+	var preview=document.getElementById("preview");
+
+	var aList=document.getElementsByTagName("a");
+
+	for (var i =0; i<aList.length; i++) {
+		// console.log(aList[i]);
+		aList[i].onclick=function(){
+			console.log(this.href);
+			console.log(this.title);
+			preview.src=this.href;
+			desc.innerHTML=this.title;
+			return false;
+		}
+	}
+
+</script>

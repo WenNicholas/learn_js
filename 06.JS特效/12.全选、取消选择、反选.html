@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>选择榜单</h2>
+	<hr>
+	<section>
+		<input type="checkbox">1 <br>
+		<input type="checkbox">2 <br>
+		<input type="checkbox">3 <br>
+		<input type="checkbox">4 <br>
+		<input type="checkbox">5<br>
+		<input type="checkbox">6<br>
+		<input type="checkbox">7<br>
+		<input type="checkbox">8<br>
+	</section>
+	<hr>
+	<button id="selectAll">全选</button>
+	<button id="cancelSelect">取消选中</button>
+	<button id="reverse">反选</button>
+
+	<script>
+		
+		window.onload=function(){
+
+			
+
+
+
+			//获取所有的复选框
+			var allSelect=document.getElementsByTagName("input");
+
+			//获取全选按钮
+			var 
+			selectAll=document.getElementById("selectAll");
+			
+			selectAll.onclick=function(){
+				for (var i = 0; i <allSelect.length; i++) {
+					allSelect[i].checked=true;
+				}
+			};
+
+			//获取取消选中
+			var cancelSelect=document.getElementById("cancelSelect");
+			cancelSelect.onclick=function(){
+				for (var i = 0; i <allSelect.length; i++) {
+					allSelect[i].checked=false;
+				}
+			}
+
+			//获取反选
+			var reverse=document.getElementById("reverse");
+
+			reverse.onclick=function(){
+				for (var i = 0; i <allSelect.length; i++) {
+					allSelect[i].checked=! allSelect[i].checked;
+				}
+			}
+
+
+
+			
+
+
+
+		}
+	</script>
+</body>
+</html>

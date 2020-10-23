@@ -1,0 +1,16 @@
+<div id="box"></div>
+
+<script>
+	var box=document.getElementById("box");
+	//获取宽度
+	box.offsetWidth;
+	//获取高度
+	box.offsetHeight;
+</script>
+
+注意：
+宽度/高度+两个padding+两个margin	两个是指：上下的padding或者左右的padding
+
+offser不能修改尺寸，只能获取尺寸，
+修改尺寸用:
+box.style.width="500px";

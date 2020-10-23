@@ -1,0 +1,6 @@
+var str="hello,world";
+var str1="你好,中国";
+str.charAt(1)	//e
+str1.charAt(1)	//好
+
+str1.charCodeAt(0);		//20320

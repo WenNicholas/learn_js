@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+</head>
+<body>
+<h2 id="timer"></h2>
+
+
+<script>
+
+    window.onload=function () {
+        //获取将来的时间
+        var futureDate=new Date("2018/11/01 12:00:00")
+        var futureTime=futureDate.getTime();
+
+
+
+        setInterval(function () {
+
+
+            //获取当前时间,获取当前时间必须写在定时器中，不然不会倒计时
+            var currentDate=new Date();
+            var currentTime=currentDate.getTime();
+
+            var chaTime=futureTime-currentTime;
+            var allSecond=chaTime/1000;
+
+            var d=parseInt(allSecond/60/60/24);
+            var h=parseInt(allSecond/60/60%24);
+            var m=parseInt(allSecond/60%60);
+            var s=parseInt(allSecond%60);
+            $("timer").innerText="距离十一假期倒计时:"+d+"天"+h+"小时"+m+"分钟"+s+"秒";
+        },1000);
+    }
+
+    function $(id) {
+        return typeof id==='string'?document.getElementById(id):null;
+    }
+</script>
+</body>
+</html>

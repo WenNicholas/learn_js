@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<img src="1.jpg" alt="" id="imgTag" style="width: 500px;height: 300px;">
+	<br>
+	<button id="prev">上一张</button>
+	<button id="next">下一张</button>
+
+
+	<script>
+		
+		window.onload=function(){
+
+			var imgTag=document.getElementById("imgTag");
+			var prev=document.getElementById("prev");
+			var next=document.getElementById("next");
+
+
+			var maxIndex=9,minIndex=1,currentIndex=minIndex;
+
+			next.onclick=function(){
+				if (currentIndex===maxIndex) {
+				currentIndex=minIndex;
+				
+				}else{
+					currentIndex++;
+				}
+				imgTag.setAttribute("src",currentIndex+".jpg");
+				console.log(imgTag.src);
+			};
+
+			prev.onclick=function(){
+
+				if (currentIndex===minIndex) {
+					currentIndex=maxIndex;
+				}else{
+					currentIndex--;
+				}
+				imgTag.setAttribute("src",currentIndex+".jpg");
+				console.log(imgTag.src);
+			}
+
+			
+		}
+
+
+	</script>
+</body>
+</html>
